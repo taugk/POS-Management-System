@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* =========================================================
+   Tailwind Source Scanner
+   ========================================================= */
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+/* =========================================================
+   Theme Configuration
+   ========================================================= */
+
+@theme {
+    /* Font */
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+
+    /* POS Color Palette */
+    --color-primary: #2563eb;
+    --color-primary-light: #3b82f6;
+    --color-primary-dark: #1e40af;
+
+    --color-secondary: #64748b;
+
+    --color-success: #22c55e;
+    --color-danger: #ef4444;
+    --color-warning: #f59e0b;
+
+    --color-bg: #f8fafc;
+    --color-card: #ffffff;
+}
+
+/* =========================================================
+   Base Style
+   ========================================================= */
+
+@layer base {
+    body {
+        @apply bg-gray-100 text-gray-800 font-sans;
+    }
+}
+
+/* =========================================================
+   Components
+   ========================================================= */
+
+@layer components {
+    /* Installer Card */
+    .installer-card {
+        @apply bg-white rounded-xl shadow-lg p-8;
+    }
+
+    /* Input Style */
+    .input {
+        @apply w-full border border-gray-300 rounded-lg px-4 py-2
+        focus:outline-none focus:ring-2 focus:ring-blue-500;
+    }
+
+    /* Button Primary */
+    .btn-primary {
+        @apply bg-blue-600 text-white px-6 py-2 rounded-lg
+        hover:bg-blue-700 transition;
+    }
+
+    /* Button Secondary */
+    .btn-secondary {
+        @apply bg-gray-200 text-gray-700 px-6 py-2 rounded-lg
+        hover:bg-gray-300 transition;
+    }
+}
+
+/* =========================================================
+   Installer Wizard Stepper
+   ========================================================= */
+
+@layer components {
+    .stepper {
+        @apply flex justify-between mb-8;
+    }
+
+    .step {
+        @apply flex flex-col items-center text-sm;
+    }
+
+    .step-circle {
+        @apply w-8 h-8 rounded-full flex items-center justify-center
+        bg-gray-300 text-white;
+    }
+
+    .step-active {
+        @apply bg-blue-600;
+    }
+
+    .step-line {
+        @apply flex-1 h-1 bg-gray-300 mx-2 mt-4;
+    }
+}
+
+/* =========================================================
+   Progress Bar
+   ========================================================= */
+
+@layer components {
+    .progress-bar {
+        @apply w-full bg-gray-200 rounded-full h-2;
+    }
+
+    .progress-value {
+        @apply bg-blue-600 h-2 rounded-full transition-all duration-500;
+    }
+}
