@@ -1,56 +1,56 @@
-# 🛒 POS System
+# 🛒 Sistem POS (Point of Sale)
 
-A complete **Point of Sale (POS)** web application built with **Laravel**, designed for small to medium-sized retail businesses. Features a guided installer, cashier interface, inventory management, promo/discount engine, purchase orders, and financial reporting.
-
----
-
-## 📸 Screenshots
-
-### 1. Installer — System Requirements
-
-![Installer - System Requirements](.github/screenshots/installer-welcome.png)
-
-> Halaman pembuka installer menampilkan versi PHP, Laravel, dan status permission `storage` & `cache` sebelum proses setup dimulai.
+Aplikasi web **Point of Sale (POS)** yang lengkap, dibangun dengan **Laravel**, dirancang untuk bisnis ritel skala kecil hingga menengah. Dilengkapi dengan installer terpandu, antarmuka kasir, manajemen inventaris, mesin promo/diskon, pesanan pembelian, dan laporan keuangan.
 
 ---
 
-### 2. Installer — Database Configuration (Step 1 of 3)
+## 📸 Tangkapan Layar
 
-![Installer - Database Configuration](.github/screenshots/installer-database.png)
+### 1. Installer — Persyaratan Sistem
 
-> Konfigurasi koneksi database: pilih driver (MySQL/MariaDB, PostgreSQL, SQLite, SQL Server), isi host, port, nama database, username, dan password. Tombol **Test & Next** memvalidasi koneksi sebelum lanjut.
+![Installer - Persyaratan Sistem](.github/screenshots/installer-welcome.png)
+
+> Halaman pembuka installer menampilkan versi PHP, Laravel, dan status izin folder `storage` & `cache` sebelum proses setup dimulai.
 
 ---
 
-### 3. Installer — Store Information (Step 2 of 3)
+### 2. Installer — Konfigurasi Database (Langkah 1 dari 3)
 
-![Installer - Store Information](.github/screenshots/installer-store.png)
+![Installer - Konfigurasi Database](.github/screenshots/installer-database.png)
+
+> Konfigurasi koneksi database: pilih driver (MySQL/MariaDB, PostgreSQL, SQLite, SQL Server), isi host, port, nama database, username, dan password. Tombol **Uji & Lanjut** memvalidasi koneksi sebelum melanjutkan ke langkah berikutnya.
+
+---
+
+### 3. Installer — Informasi Toko (Langkah 2 dari 3)
+
+![Installer - Informasi Toko](.github/screenshots/installer-store.png)
 
 > Input profil bisnis: nama toko, alamat, dan nomor telepon/WhatsApp yang akan ditampilkan di struk penjualan.
 
 ---
 
-### 4. Installer — Admin Account (Step 3 of 3)
+### 4. Installer — Akun Admin (Langkah 3 dari 3)
 
-![Installer - Admin Account](.github/screenshots/installer-admin.png)
+![Installer - Akun Admin](.github/screenshots/installer-admin.png)
 
-> Pembuatan akun superuser pertama: nama lengkap, email, dan password minimal 8 karakter. Klik **Finalize Installation** untuk menjalankan migrasi dan mengunci installer.
+> Pembuatan akun superuser pertama: nama lengkap, email, dan password minimal 8 karakter. Klik **Selesaikan Instalasi** untuk menjalankan migrasi dan mengunci installer.
 
 ---
 
 ### 5. Login
 
-![POS System Login](.github/screenshots/login.png)
+![Login Sistem POS](.github/screenshots/login.png)
 
-> Halaman login yang tampil setelah instalasi selesai. Gunakan email dan password yang dibuat di Step 3 installer.
+> Halaman login yang muncul setelah instalasi selesai. Gunakan email dan password yang dibuat pada Langkah 3 installer.
 
 ---
 
-### 6. Dashboard Overview
+### 6. Ikhtisar Dashboard
 
-![Dashboard Overview](.github/screenshots/dashboard.png)
+![Ikhtisar Dashboard](.github/screenshots/dashboard.png)
 
-> Dashboard utama menampilkan omzet bulan ini, laba bersih, jumlah produk & vendor, promo aktif, grafik tren penjualan 7 hari, dan notifikasi stok menipis — semuanya real-time.
+> Dashboard utama menampilkan omzet bulan ini, laba bersih, jumlah produk & vendor, promo aktif, grafik tren penjualan 7 hari, dan notifikasi stok menipis — semuanya secara real-time.
 
 ---
 
@@ -58,66 +58,66 @@ A complete **Point of Sale (POS)** web application built with **Laravel**, desig
 
 ![Point of Sale](.github/screenshots/pos.png)
 
-> Halaman kasir dengan grid produk, pencarian cepat (F1), input kode promo, kalkulasi subtotal + pajak 12%, dan tombol **Checkout & Print** (F8). Order summary diperbarui otomatis saat produk dipilih.
+> Halaman kasir dengan tampilan grid produk, pencarian cepat (F1), input kode promo, kalkulasi subtotal + pajak 12%, dan tombol **Checkout & Cetak** (F8). Ringkasan pesanan diperbarui otomatis saat produk dipilih.
 
 ---
 
-| Module                         | Description                                                                                                      |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| 🖥️ **Cashier (POS)**           | Fast transaction UI with real-time stock checks, promo codes, tax calculation, and change display                |
-| 📦 **Product Management**      | Add/edit/delete products with images, categories, and supplier links                                             |
-| 🏷️ **Category Management**     | Organize products; protected deletion if products are still assigned                                             |
-| 🤝 **Supplier Management**     | Track suppliers linked to products and purchase orders                                                           |
-| 🛒 **Purchase Orders**         | Create purchase orders, receive stock, and auto-update inventory                                                 |
-| 🎟️ **Promo / Discount Engine** | Create percentage or fixed-amount promo codes with expiry dates, usage limits, and minimum purchase requirements |
-| 👤 **User Management**         | Manage admin, cashier, and owner accounts with profile photos and active/inactive status                         |
-| 💸 **Expense Tracking**        | Log business expenses with categories and auto-generated reference numbers                                       |
-| 📊 **Dashboard**               | Real-time revenue, expense, and net profit summary with 7-day sales chart and low-stock alerts                   |
-| 🔧 **Web Installer**           | Multi-step GUI installer — no terminal needed for initial setup                                                  |
+| Modul                         | Deskripsi                                                                                                                      |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| 🖥️ **Kasir (POS)**            | Antarmuka transaksi cepat dengan pengecekan stok real-time, kode promo, kalkulasi pajak, dan tampilan kembalian                |
+| 📦 **Manajemen Produk**       | Tambah/ubah/hapus produk beserta gambar, kategori, dan tautan supplier                                                         |
+| 🏷️ **Manajemen Kategori**     | Kelola kategori produk; penghapusan diproteksi jika produk masih terhubung                                                     |
+| 🤝 **Manajemen Supplier**     | Lacak supplier yang terhubung ke produk dan pesanan pembelian                                                                  |
+| 🛒 **Pesanan Pembelian**      | Buat pesanan pembelian, terima stok, dan perbarui inventaris secara otomatis                                                   |
+| 🎟️ **Mesin Promo / Diskon**   | Buat kode promo persentase atau potongan tetap dengan tanggal kedaluwarsa, batas penggunaan, dan syarat minimal pembelian      |
+| 👤 **Manajemen Pengguna**     | Kelola akun admin, kasir, dan pemilik dengan foto profil dan status aktif/nonaktif                                             |
+| 💸 **Pencatatan Pengeluaran** | Catat pengeluaran bisnis dengan kategori dan nomor referensi yang dibuat otomatis                                              |
+| 📊 **Dashboard**              | Ringkasan pendapatan, pengeluaran, dan laba bersih secara real-time dengan grafik penjualan 7 hari dan peringatan stok menipis |
+| 🔧 **Installer Berbasis Web** | Installer GUI multi-langkah — tidak perlu terminal untuk setup awal                                                            |
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tumpukan Teknologi
 
 - **Framework:** Laravel 12
-- **Language:** PHP 8.1+
+- **Bahasa:** PHP 8.1+
 - **Database:** MySQL / PostgreSQL / SQLite / SQL Server
-- **Frontend:** Blade templating, Tailwind CSS v4, JavaScript (Fetch API for POS)
+- **Frontend:** Blade templating, Tailwind CSS v4, JavaScript (Fetch API untuk POS)
 - **Build Tool:** Vite
-- **Storage:** Laravel Filesystem (local/public disk for product & profile images)
+- **Penyimpanan:** Laravel Filesystem (disk lokal/publik untuk gambar produk & profil)
 
 ---
 
-## ⚙️ Requirements
+## ⚙️ Persyaratan Sistem
 
 - PHP >= 8.1
 - Composer
 - Node.js >= 16 & NPM >= 8 (untuk Vite + Tailwind CSS)
-- A supported database (MySQL recommended)
-- Web server: Apache / Nginx (atau `php artisan serve` untuk lokal)
+- Database yang didukung (MySQL direkomendasikan)
+- Web server: Apache / Nginx (atau `php artisan serve` untuk penggunaan lokal)
 
 ---
 
-## 🚀 Setup dari Awal (Full Guide)
+## 🚀 Panduan Setup Lengkap
 
 ### Prasyarat
 
-Pastikan semua tools berikut sudah terinstall di komputer kamu sebelum mulai:
+Pastikan semua alat berikut sudah terpasang di komputer kamu sebelum memulai:
 
-| Tool     | Versi Minimum | Cek Versi         |
+| Alat     | Versi Minimum | Cek Versi         |
 | -------- | ------------- | ----------------- |
 | PHP      | 8.1           | `php -v`          |
 | Composer | 2.x           | `composer -V`     |
 | Node.js  | 16.x          | `node -v`         |
 | NPM      | 8.x           | `npm -v`          |
 | MySQL    | 5.7 / 8.x     | `mysql --version` |
-| Git      | any           | `git --version`   |
+| Git      | bebas         | `git --version`   |
 
-> **Rekomendasi lokal**: Gunakan [Laragon](https://laragon.org/) (Windows) atau [Herd](https://herd.laravel.com/) (Mac) agar PHP, MySQL, dan virtual host sudah tersedia otomatis.
+> **Rekomendasi lokal**: Gunakan [Laragon](https://laragon.org/) (Windows) atau [Herd](https://herd.laravel.com/) (Mac) agar PHP, MySQL, dan virtual host sudah tersedia secara otomatis.
 
 ---
 
-### Langkah 1 — Clone & Masuk ke Folder Project
+### Langkah 1 — Clone & Masuk ke Folder Proyek
 
 ```bash
 git clone https://github.com/your-username/your-repo.git
@@ -126,26 +126,26 @@ cd your-repo
 
 ---
 
-### Langkah 2 — Install Dependensi PHP
+### Langkah 2 — Instal Dependensi PHP
 
 ```bash
 composer install
 ```
 
-> Jika muncul error `PHP extension not found`, pastikan ekstensi berikut aktif di `php.ini`:
+> Jika muncul error `PHP extension not found`, pastikan ekstensi berikut sudah aktif di `php.ini`:
 > `ext-pdo`, `ext-mbstring`, `ext-openssl`, `ext-tokenizer`, `ext-xml`, `ext-fileinfo`, `ext-gd`
 
 ---
 
-### Langkah 3 — Install Dependensi Frontend & Setup Tailwind CSS
+### Langkah 3 — Instal Dependensi Frontend & Setup Tailwind CSS
 
-**Install semua package NPM:**
+**Instal semua package NPM:**
 
 ```bash
 npm install
 ```
 
-**Install Tailwind CSS v4:**
+**Instal Tailwind CSS v4:**
 
 ```bash
 npm install -D tailwindcss @tailwindcss/vite
@@ -175,9 +175,9 @@ export default defineConfig({
 @import "tailwindcss";
 ```
 
-> Di Tailwind v4, tidak perlu file `tailwind.config.js` maupun directive `@tailwind base/components/utilities`. Satu baris import ini sudah cukup — content scanning dilakukan otomatis oleh plugin Vite.
+> Di Tailwind v4, tidak perlu file `tailwind.config.js` maupun direktif `@tailwind base/components/utilities`. Satu baris impor ini sudah cukup — pemindaian konten dilakukan secara otomatis oleh plugin Vite.
 
-**Pastikan layout utama kamu memuat asset via `@vite` di `<head>`:**
+**Pastikan layout utama memuat aset via `@vite` di dalam `<head>`:**
 
 ```html
 <head>
@@ -188,19 +188,19 @@ export default defineConfig({
 </head>
 ```
 
-> Jika ada beberapa file layout (misal layout terpisah untuk installer), tambahkan `@vite` ke masing-masing file tersebut.
+> Jika ada beberapa file layout (misalnya layout terpisah untuk installer), tambahkan `@vite` ke masing-masing file tersebut.
 
-**Build assets:**
+**Build aset:**
 
 ```bash
-# Development (dengan hot-reload)
+# Mode pengembangan (dengan hot-reload)
 npm run dev
 
-# Production
+# Mode produksi
 npm run build
 ```
 
-> Untuk mode development, jalankan `npm run dev` di terminal terpisah sambil `php artisan serve` berjalan.
+> Untuk mode pengembangan, jalankan `npm run dev` di terminal terpisah selagi `php artisan serve` berjalan.
 
 ---
 
@@ -211,36 +211,36 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-File `.env` yang baru dibuat akan berisi `APP_KEY` yang sudah terisi otomatis. Kamu **tidak perlu** mengisi `DB_*` secara manual jika menggunakan Web Installer (Langkah 6).
+File `.env` yang baru dibuat akan berisi `APP_KEY` yang sudah terisi secara otomatis. Kamu **tidak perlu** mengisi `DB_*` secara manual jika menggunakan Installer Berbasis Web (Langkah 6).
 
 ---
 
-### Langkah 5 — Atur Permission & Storage Link
+### Langkah 5 — Atur Izin & Tautan Storage
 
 ```bash
 # Linux / Mac
 chmod -R 775 storage bootstrap/cache
-chown -R www-data:www-data storage bootstrap/cache  # sesuaikan user web server kamu
+chown -R www-data:www-data storage bootstrap/cache  # sesuaikan dengan user web server kamu
 
-# Buat symlink storage agar file upload bisa diakses publik
+# Buat symlink storage agar file yang diunggah bisa diakses publik
 php artisan storage:link
 ```
 
-> **Windows (Laragon/XAMPP):** Permission tidak perlu diubah. Cukup jalankan `php artisan storage:link` saja.
+> **Windows (Laragon/XAMPP):** Izin tidak perlu diubah. Cukup jalankan `php artisan storage:link` saja.
 
 ---
 
 ### Langkah 6 — Setup Database
 
-#### Opsi A — Web Installer ✅ (Direkomendasikan)
+#### Opsi A — Installer Berbasis Web ✅ (Direkomendasikan)
 
-Tidak perlu sentuh database manual. Jalankan server dulu:
+Tidak perlu menyentuh database secara manual. Jalankan server terlebih dahulu:
 
 ```bash
 php artisan serve
 ```
 
-Lalu buka browser dan akses:
+Kemudian buka browser dan akses:
 
 ```text
 http://localhost:8000/install
@@ -249,21 +249,21 @@ http://localhost:8000/install
 Installer akan memandu kamu melalui 4 langkah:
 
 ```text
-[Step 1] Koneksi Database
-         → Masukkan host, port, nama DB, username, password
-         → Database akan dibuat otomatis jika belum ada (MySQL)
-         ↓
-[Step 2] Informasi Toko
-         → Nama toko, alamat, nomor telepon
-         ↓
-[Step 3] Akun Admin
-         → Nama, email, dan password untuk login pertama kali
-         ↓
-[Step 4] Proses Instalasi
-         → Migrasi database berjalan otomatis
-         → Data toko & akun admin tersimpan
-         → File .env diperbarui permanen
-         → Installer dikunci (tidak bisa diakses lagi)
+[Langkah 1] Koneksi Database
+             → Masukkan host, port, nama DB, username, password
+             → Database akan dibuat otomatis jika belum ada (MySQL)
+             ↓
+[Langkah 2] Informasi Toko
+             → Nama toko, alamat, nomor telepon
+             ↓
+[Langkah 3] Akun Admin
+             → Nama, email, dan password untuk login pertama kali
+             ↓
+[Langkah 4] Proses Instalasi
+             → Migrasi database berjalan otomatis
+             → Data toko & akun admin tersimpan
+             → File .env diperbarui secara permanen
+             → Installer dikunci (tidak bisa diakses lagi)
 ```
 
 Setelah selesai, kamu akan diarahkan ke halaman login.
@@ -284,7 +284,7 @@ Setelah selesai, kamu akan diarahkan ke halaman login.
     DB_PORT=3306
     DB_DATABASE=nama_database
     DB_USERNAME=root
-    DB_PASSWORD=your_password
+    DB_PASSWORD=password_kamu
 
     APP_NAME="Laravel POS"
     APP_URL=http://localhost:8000
@@ -312,7 +312,7 @@ Setelah selesai, kamu akan diarahkan ke halaman login.
     ]);
     ```
 
-5. Buat lock file installer agar middleware tidak memblokir akses:
+5. Buat file kunci installer agar middleware tidak memblokir akses:
 
     ```bash
     echo "installed" > storage/installed
@@ -332,174 +332,174 @@ Setelah selesai, kamu akan diarahkan ke halaman login.
 http://localhost:8000/login
 ```
 
-Login dengan akun admin yang dibuat di langkah sebelumnya, lalu mulai setup:
+Login dengan akun admin yang dibuat pada langkah sebelumnya, lalu mulai konfigurasi:
 
-1. **Settings** → Isi nama toko, alamat, dan nomor telepon
-2. **Categories** → Tambah kategori produk
-3. **Suppliers** → Tambah data supplier
-4. **Products** → Tambah produk dengan harga dan stok awal
-5. **Users** → Tambah akun kasir jika diperlukan
-6. **Promos** _(opsional)_ → Buat kode diskon untuk promosi
+1. **Pengaturan** → Isi nama toko, alamat, dan nomor telepon
+2. **Kategori** → Tambah kategori produk
+3. **Supplier** → Tambah data supplier
+4. **Produk** → Tambah produk dengan harga dan stok awal
+5. **Pengguna** → Tambah akun kasir jika diperlukan
+6. **Promo** _(opsional)_ → Buat kode diskon untuk promosi
 
 Setelah itu, akses halaman **Kasir** (`/sales/create`) untuk mulai bertransaksi.
 
 ---
 
-### Troubleshooting Umum
+### Pemecahan Masalah Umum
 
-| Error                                              | Solusi                                                                                                     |
-| -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `No application encryption key has been specified` | Jalankan `php artisan key:generate`                                                                        |
-| `SQLSTATE: Access denied`                          | Periksa `DB_USERNAME` dan `DB_PASSWORD` di `.env`                                                          |
-| `Target class [installed] does not exist`          | Daftarkan middleware di `bootstrap/app.php` (Laravel 12)                                                   |
-| Foto produk tidak muncul                           | Jalankan `php artisan storage:link`                                                                        |
-| Halaman installer terus muncul                     | Buat file `storage/installed` secara manual                                                                |
-| `composer install` gagal                           | Pastikan PHP >= 8.1 dan ekstensi yang dibutuhkan aktif                                                     |
-| `npm run build` gagal                              | Pastikan Node.js >= 16, hapus `node_modules` lalu `npm install` ulang                                      |
-| Class Tailwind tidak muncul                        | Pastikan `@vite` ada di `<head>` layout dan sudah jalankan `npm run dev` atau `npm run build`              |
-| Class dinamis Tailwind tidak ter-generate          | Tulis class secara eksplisit — Tailwind v4 tidak bisa scan string template seperti `` `bg-${color}-500` `` |
-
----
-
-## 👤 Default Roles
-
-| Role      | Access                                            |
-| --------- | ------------------------------------------------- |
-| `owner`   | Full access including reports and settings        |
-| `admin`   | Full access including user and product management |
-| `cashier` | POS screen and own transaction history            |
-
-The first admin account is created during installation.
+| Error                                              | Solusi                                                                                                         |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `No application encryption key has been specified` | Jalankan `php artisan key:generate`                                                                            |
+| `SQLSTATE: Access denied`                          | Periksa `DB_USERNAME` dan `DB_PASSWORD` di file `.env`                                                         |
+| `Target class [installed] does not exist`          | Daftarkan middleware di `bootstrap/app.php` (Laravel 12)                                                       |
+| Foto produk tidak muncul                           | Jalankan `php artisan storage:link`                                                                            |
+| Halaman installer terus muncul                     | Buat file `storage/installed` secara manual                                                                    |
+| `composer install` gagal                           | Pastikan PHP >= 8.1 dan ekstensi yang dibutuhkan sudah aktif                                                   |
+| `npm run build` gagal                              | Pastikan Node.js >= 16, hapus folder `node_modules` lalu jalankan `npm install` ulang                          |
+| Class Tailwind tidak muncul                        | Pastikan `@vite` ada di `<head>` layout dan sudah menjalankan `npm run dev` atau `npm run build`               |
+| Class dinamis Tailwind tidak ter-generate          | Tulis class secara eksplisit — Tailwind v4 tidak bisa memindai string template seperti `` `bg-${color}-500` `` |
 
 ---
 
-## 📁 Key Controllers
+## 👤 Peran Pengguna Bawaan
+
+| Peran     | Akses                                                |
+| --------- | ---------------------------------------------------- |
+| `owner`   | Akses penuh termasuk laporan keuangan dan pengaturan |
+| `admin`   | Akses penuh termasuk manajemen pengguna dan produk   |
+| `cashier` | Layar POS dan riwayat transaksi milik sendiri        |
+
+Akun admin pertama dibuat saat proses instalasi.
+
+---
+
+## 📁 Controller Utama
 
 ```text
 app/Http/Controllers/
-├── InstallerController.php   # Multi-step web installer
-├── DashboardController.php   # Stats, charts, and low-stock alerts
-├── SalesController.php       # POS transactions with promo & tax logic
-├── PromoController.php       # Promo CRUD + real-time code validation API
-├── ProductsController.php    # Product CRUD with image upload
-├── CategoryController.php    # Category management (with deletion guard)
-├── SupplierController.php    # Supplier CRUD with product-link guard
-├── UserController.php        # User management with profile photos
-├── PurchaseController.php    # Purchase orders and stock receiving
-├── ExpensesController.php    # Expense logging and financial summary
-└── SettingsController.php    # Store name, address, phone settings
+├── InstallerController.php   # Installer berbasis web multi-langkah
+├── DashboardController.php   # Statistik, grafik, dan peringatan stok menipis
+├── SalesController.php       # Transaksi POS dengan logika promo & pajak
+├── PromoController.php       # CRUD promo + API validasi kode real-time
+├── ProductsController.php    # CRUD produk dengan unggah gambar
+├── CategoryController.php    # Manajemen kategori (dengan penjaga penghapusan)
+├── SupplierController.php    # CRUD supplier dengan penjaga tautan produk
+├── UserController.php        # Manajemen pengguna dengan foto profil
+├── PurchaseController.php    # Pesanan pembelian dan penerimaan stok
+├── ExpensesController.php    # Pencatatan pengeluaran dan ringkasan keuangan
+└── SettingsController.php    # Pengaturan nama toko, alamat, dan nomor telepon
 
 app/Http/Middleware/
-├── CheckInstalled.php        # Redirects to installer if not yet set up; blocks re-install
-└── AutoMigrate.php           # Runs pending migrations automatically on each request
+├── CheckInstalled.php        # Mengarahkan ke installer jika belum setup; memblokir instalasi ulang
+└── AutoMigrate.php           # Menjalankan migrasi yang tertunda secara otomatis pada setiap permintaan
 ```
 
 ---
 
-## 🧾 POS Transaction Flow
+## 🧾 Alur Transaksi POS
 
 ```text
-Cashier scans/selects products
+Kasir memindai/memilih produk
         ↓
-Subtotal calculated client-side
+Subtotal dihitung di sisi klien
         ↓
-Optional: apply promo code (validated via API)
+Opsional: terapkan kode promo (divalidasi via API)
         ↓
-Tax calculated on (Subtotal − Discount)
+Pajak dihitung dari (Subtotal − Diskon)
         ↓
-Customer pays → change displayed
+Pelanggan membayar → kembalian ditampilkan
         ↓
-Server validates → stock decremented → invoice saved
+Server memvalidasi → stok dikurangi → faktur disimpan
 ```
 
-All final calculations are **re-validated server-side** in `SalesController@store` to prevent client-side manipulation.
+Semua kalkulasi akhir **divalidasi ulang di sisi server** di `SalesController@store` untuk mencegah manipulasi dari sisi klien.
 
 ---
 
-## 🎟️ Promo Code Validation
+## 🎟️ Validasi Kode Promo
 
-The `POST /promos/check` endpoint validates a promo code in real-time. It checks:
+Endpoint `POST /promos/check` memvalidasi kode promo secara real-time. Pemeriksaan yang dilakukan:
 
-1. Code existence
-2. Active status (`is_active = true`)
-3. Date range (`start_date` ≤ today ≤ `end_date`)
-4. Usage quota (`used_count < usage_limit`)
-5. Minimum purchase (`subtotal >= min_purchase`)
+1. Keberadaan kode
+2. Status aktif (`is_active = true`)
+3. Rentang tanggal berlaku (`start_date` ≤ hari ini ≤ `end_date`)
+4. Kuota penggunaan (`used_count < usage_limit`)
+5. Syarat minimal pembelian (`subtotal >= min_purchase`)
 
-If valid, it returns the computed `discount_value` for the given subtotal.
-
----
-
-## 📊 Dashboard Metrics
-
-- **Total products** and **active promos**
-- **Monthly revenue**, **monthly expenses**, and **net profit**
-- **7-day sales chart** (daily aggregation)
-- **Low stock alert** — products with stock ≤ 5
+Jika valid, endpoint mengembalikan `discount_value` yang sudah dihitung berdasarkan subtotal yang diberikan.
 
 ---
 
-## 🗂️ Database Overview
+## 📊 Metrik Dashboard
 
-| Table            | Purpose                            |
-| ---------------- | ---------------------------------- |
-| `users`          | Authentication and role management |
-| `products`       | Product catalog                    |
-| `categories`     | Product categories                 |
-| `suppliers`      | Supplier records                   |
-| `sales`          | Transaction headers                |
-| `sales_items`    | Transaction line items             |
-| `promos`         | Discount / promo code definitions  |
-| `purchases`      | Purchase order headers             |
-| `purchase_items` | Purchase order line items          |
-| `expenses`       | Expense records                    |
-| `settings`       | Store name, address, phone         |
+- **Total produk** dan **promo aktif**
+- **Pendapatan bulanan**, **pengeluaran bulanan**, dan **laba bersih**
+- **Grafik penjualan 7 hari** (agregasi harian)
+- **Peringatan stok menipis** — produk dengan stok ≤ 5
 
 ---
 
-## 🗺️ Route Overview
+## 🗂️ Gambaran Umum Database
 
-| Group                                    | Middleware                          | Description                               |
-| ---------------------------------------- | ----------------------------------- | ----------------------------------------- |
-| `/`                                      | —                                   | Welcome / landing page                    |
-| `/login`, `POST /login`                  | `installed`                         | Guest authentication                      |
-| `/logout`                                | —                                   | Session logout                            |
-| `/install/*`                             | `CheckInstalled`                    | Web installer steps (blocked after setup) |
-| `/dashboard`                             | `auth`, `installed`, `auto-migrate` | Main app entry point                      |
-| `/products`, `/categories`, `/suppliers` | `auth`                              | Inventory management                      |
-| `/purchases`, `/sales`, `/expenses`      | `auth`                              | Operations & transactions                 |
-| `/promos`, `/users`                      | `auth`                              | Marketing & access control                |
-| `POST /promos/check`                     | `auth`                              | Real-time promo code validation (AJAX)    |
-| `/settings`                              | `auth`                              | Store settings (GET + POST)               |
-
----
-
-## 🔒 Security Notes
-
-- Passwords are hashed using Laravel's `Hash::make()` (bcrypt)
-- CSRF protection enabled on all forms
-- Promo codes and stock are **re-validated server-side** on every transaction
-- The installer is automatically disabled after successful setup (`storage/installed` lock file)
-- `CheckInstalled` middleware prevents re-running the installer once the lock file exists
-- `AutoMigrate` middleware applies any pending migrations on startup — useful after deployments
-- Supplier deletion is guarded: suppliers linked to products cannot be deleted
-- Category deletion is guarded: categories linked to products cannot be deleted
-- Sensitive database credentials are written to `.env` during installation and not re-exposed in subsequent requests
+| Tabel            | Fungsi                           |
+| ---------------- | -------------------------------- |
+| `users`          | Autentikasi dan manajemen peran  |
+| `products`       | Katalog produk                   |
+| `categories`     | Kategori produk                  |
+| `suppliers`      | Data supplier                    |
+| `sales`          | Header transaksi penjualan       |
+| `sales_items`    | Baris detail transaksi penjualan |
+| `promos`         | Definisi kode diskon / promo     |
+| `purchases`      | Header pesanan pembelian         |
+| `purchase_items` | Baris detail pesanan pembelian   |
+| `expenses`       | Catatan pengeluaran              |
+| `settings`       | Nama toko, alamat, nomor telepon |
 
 ---
 
-## 📜 License
+## 🗺️ Ikhtisar Rute
 
-This project is open-source under the [MIT License](LICENSE).
+| Grup                                     | Middleware                          | Keterangan                                         |
+| ---------------------------------------- | ----------------------------------- | -------------------------------------------------- |
+| `/`                                      | —                                   | Halaman sambutan / landing page                    |
+| `/login`, `POST /login`                  | `installed`                         | Autentikasi tamu                                   |
+| `/logout`                                | —                                   | Logout sesi                                        |
+| `/install/*`                             | `CheckInstalled`                    | Langkah-langkah installer (diblokir setelah setup) |
+| `/dashboard`                             | `auth`, `installed`, `auto-migrate` | Titik masuk utama aplikasi                         |
+| `/products`, `/categories`, `/suppliers` | `auth`                              | Manajemen inventaris                               |
+| `/purchases`, `/sales`, `/expenses`      | `auth`                              | Operasional & transaksi                            |
+| `/promos`, `/users`                      | `auth`                              | Pemasaran & kontrol akses                          |
+| `POST /promos/check`                     | `auth`                              | Validasi kode promo real-time (AJAX)               |
+| `/settings`                              | `auth`                              | Pengaturan toko (GET + POST)                       |
 
 ---
 
-## 🤝 Contributing
+## 🔒 Catatan Keamanan
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
+- Password di-hash menggunakan `Hash::make()` milik Laravel (bcrypt)
+- Proteksi CSRF diaktifkan pada semua formulir
+- Kode promo dan stok **divalidasi ulang di sisi server** pada setiap transaksi
+- Installer dinonaktifkan secara otomatis setelah setup berhasil (file kunci `storage/installed`)
+- Middleware `CheckInstalled` mencegah pengulangan installer setelah file kunci ada
+- Middleware `AutoMigrate` menerapkan migrasi yang tertunda saat startup — berguna setelah deployment
+- Penghapusan supplier diproteksi: supplier yang masih terhubung ke produk tidak bisa dihapus
+- Penghapusan kategori diproteksi: kategori yang masih terhubung ke produk tidak bisa dihapus
+- Kredensial database yang sensitif ditulis ke `.env` saat instalasi dan tidak diekspos kembali pada permintaan berikutnya
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Commit your changes: `git commit -m 'Add your feature'`
-4. Push: `git push origin feature/your-feature`
-5. Open a Pull Request
+---
+
+## 📜 Lisensi
+
+Proyek ini adalah open-source di bawah [Lisensi MIT](LICENSE).
+
+---
+
+## 🤝 Kontribusi
+
+Pull request sangat disambut. Untuk perubahan besar, silakan buka issue terlebih dahulu untuk mendiskusikan apa yang ingin kamu ubah.
+
+1. Fork repositori ini
+2. Buat branch fitur: `git checkout -b fitur/nama-fitur-kamu`
+3. Commit perubahan: `git commit -m 'Tambah fitur kamu'`
+4. Push ke branch: `git push origin fitur/nama-fitur-kamu`
+5. Buka Pull Request
