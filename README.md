@@ -4,7 +4,63 @@ A complete **Point of Sale (POS)** web application built with **Laravel**, desig
 
 ---
 
-## ✨ Features
+## 📸 Screenshots
+
+### 1. Installer — System Requirements
+
+![Installer - System Requirements](.github/screenshots/installer-welcome.png)
+
+> Halaman pembuka installer menampilkan versi PHP, Laravel, dan status permission `storage` & `cache` sebelum proses setup dimulai.
+
+---
+
+### 2. Installer — Database Configuration (Step 1 of 3)
+
+![Installer - Database Configuration](.github/screenshots/installer-database.png)
+
+> Konfigurasi koneksi database: pilih driver (MySQL/MariaDB, PostgreSQL, SQLite, SQL Server), isi host, port, nama database, username, dan password. Tombol **Test & Next** memvalidasi koneksi sebelum lanjut.
+
+---
+
+### 3. Installer — Store Information (Step 2 of 3)
+
+![Installer - Store Information](.github/screenshots/installer-store.png)
+
+> Input profil bisnis: nama toko, alamat, dan nomor telepon/WhatsApp yang akan ditampilkan di struk penjualan.
+
+---
+
+### 4. Installer — Admin Account (Step 3 of 3)
+
+![Installer - Admin Account](.github/screenshots/installer-admin.png)
+
+> Pembuatan akun superuser pertama: nama lengkap, email, dan password minimal 8 karakter. Klik **Finalize Installation** untuk menjalankan migrasi dan mengunci installer.
+
+---
+
+### 5. Login
+
+![POS System Login](.github/screenshots/login.png)
+
+> Halaman login yang tampil setelah instalasi selesai. Gunakan email dan password yang dibuat di Step 3 installer.
+
+---
+
+### 6. Dashboard Overview
+
+![Dashboard Overview](.github/screenshots/dashboard.png)
+
+> Dashboard utama menampilkan omzet bulan ini, laba bersih, jumlah produk & vendor, promo aktif, grafik tren penjualan 7 hari, dan notifikasi stok menipis — semuanya real-time.
+
+---
+
+### 7. Point of Sale (Kasir)
+
+![Point of Sale](.github/screenshots/pos.png)
+
+> Halaman kasir dengan grid produk, pencarian cepat (F1), input kode promo, kalkulasi subtotal + pajak 12%, dan tombol **Checkout & Print** (F8). Order summary diperbarui otomatis saat produk dipilih.
+
+---
 
 | Module                         | Description                                                                                                      |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
